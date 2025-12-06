@@ -29,5 +29,5 @@ try:
     ALTER TABLE TTA 
     ADD COLUMN pages JSON;
     """)
-except Exception as e:
+except Exception:
     pass
