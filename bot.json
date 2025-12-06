@@ -11,9 +11,23 @@
         },
         "main": {
             "text": "📚 Выберите книгу",
+            "keyboard": "list_books"
+        },
+        "read_book|{book_id}|{book_page}": {
+            "row": 3,
+            "text": "{error|hide}\n\n{book_text}",
+            "function": "read_book",
             "keyboard": {
-                "add_book": "Добавить книгу"
-            }
+                "read_book|{book_id}|{prev_page}": "{variables.tta_pagination_back}",
+                "placeholder": "{book_page}/{total_pages}",
+                "read_book|{book_id}|{next_page}": "{variables.tta_pagination_next}"
+            },
+            "input": {
+                "data": "select_page",
+                "menu": "read_book|{book_id}",
+                "function": "read_book"
+            },
+            "return": "main"
         }
     },
     "variables": {
